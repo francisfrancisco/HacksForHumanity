@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <style media="screen">
+      #forms{
+        text-align: center;
+      }
+      #pic,#img{
+        width: 90%;
+        height: 15%;
+      }
+      #img{
+        width: 75%;
+        padding-right: 30px;
+        display: flex;
+        float: left;
+      }
+      #logo{
+        display: inline;
+        height: 150px;
+        width: 150px;
+        float: right;
+        margin-top: 150px;
+      }
+      #he, #back{
+        font-family: 'Oswald', sans-serif;
+      }
+    </style>
+    <link rel="icon" href="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p320x320/43337727_708503136149905_1174188726662725632_n.png?_nc_cat=101&oh=e9065ea68efa135e69ca237dc29ce545&oe=5C4AE567">
+  </head>
+  <body>
+    <a id="back" href="/">back</a>
+    <div id="forms" class="">
+      <h2 class="he">login</h2>
+      <form action="/login" method="post">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="submit">
+      </form>
+      <h2 class="he">register your pet</h2>
+      <form action="/register" method="post">
+        <input type="text" name="owner_name" size="80"placeholder="name"><br>
+        <input type="email" name="owner_email" size="80"placeholder="email"><br>
+        <input type="password" name="password" size="80"placeholder="password"><br>
+        <input type="text" name="owner_location" size="80"placeholder="location"><br>
+        <input type="text" name="org_name" size="80"placeholder="Organization's name(if applicable)"><br>
+        <input type="text" name="pet_name" size="80"placeholder="pet's name"><br>
+        <textarea name="pet_bio" rows="8" cols="78size="80"" placeholder="Tell us a little about your pet"></textarea><br>
+        <input type="text" name="img_url" size="80"placeholder="image url"><br>
+        <input id="submit" type="submit" value="submit">
+      </form>
+    </div>
+    <div id="pic" class="">
+      <img id="img" src="https://i.pinimg.com/originals/b2/ba/9a/b2ba9a8c59456856e37ffa7fe6993093.jpg" alt="">
+      <img id="logo"src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43320990_708503139483238_7633264698791559168_o.png?_nc_cat=102&oh=1733d6ea8bf4f5ab07d497c16d72b406&oe=5C62C824" alt="">
+    </div>
+    <script type="text/javascript">
+      document.querySelector('#submit').addEventListener('click', () => {
+        alert('Your pet has been registered')
+      })
+    </script>
+  </body>
+</html>

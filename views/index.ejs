@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-0/p370x247/43337727_708503136149905_1174188726662725632_n.png?_nc_cat=101&oh=23a90c19b19d2e321e921932fc70273a&oe=5C1E8FBF">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <style media="screen">
+    *,html{
+      margin: 0;
+      padding: 0;
+    }
+      .docs{
+        border: solid black 1px;
+        border-radius: 5px;
+        height: 25%;
+        width: 25%;
+        margin: .74%;
+        display: inline-block;
+        padding: 5px;
+      }
+      h1{
+        margin: 0 auto;
+        margin-top: 210px;
+        border-radius: 30px;
+        width: 250px;
+        height: 250px;
+        font-size: 90px;
+      }
+
+      img{
+        height: 200px;
+        width: 200px;
+      }
+      #logo{
+        font-family: 'Permanent Marker', cursive;
+        color: white;
+        border: solid black 1px;
+        text-align: center;
+        height: 70vh;
+        background-image: url(https://alpinepub.files.wordpress.com/2015/05/jack-russell-terriers-playing.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #border{
+        margin-top: 100px;
+        border: solid rgb(23, 201, 3) 40px;
+        border-radius: 30px 30px;
+      }
+
+      #container{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      h3{
+        text-align: center;
+        font-size: 90px;
+        color: rgb(23,201,3);
+        font-family: 'Permanent Marker', cursive;
+      }
+      h2{
+        font-size: 40px;
+        color: black;
+      }
+      #mission, .list{
+        font-family: 'Permanent Marker', cursive;
+        text-align: center;
+        font-size: 40px;
+        color: rgb(23,201,3);
+      }
+      #mission{
+        margin-top: 30px;
+      }
+      a:link, a:visited{
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        font-size: 15px;
+        color: rgb(23,201,3);
+      }
+      #login{
+        font-family: 'Oswald', sans-serif;
+        float: right;
+        position: fixed;
+        margin-top: 5px;
+        margin-left: 5px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid rgb(23,201,3);
+        background-color: rgb(23,201,3);
+        border-radius: 5px;
+        padding:10px;
+        font-size: 22px;
+      }
+      #login:hover{
+        color: rgb(23,201,3);
+        background-color: white;
+      }
+      #petpic{
+        border-radius: 3px;
+      }
+      .content{
+        color: black;
+        font-family: 'Oswald', sans-serif;
+        font-size:30px;
+      }
+      #stat{
+        color: grey;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      #team{
+        height: 600px;
+        width: 600px
+      }
+      #pName{
+        font-family: 'Oswald', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="login" href="/owners/login">Pet Login/Register</a>
+    <div id="logo" class="">
+      <h1>FETCH</h1>
+    </div>
+    <h2 class="list">Animals List</h2>
+     <div class="" id="container">
+      <% for(let i = 0; i < pet.length; i++) { %>
+        <div class="docs">
+          <h2 id="pName"><%= pet[i].pet_name%></h2>
+          <img id="petpic" src="<%= pet[i].img_url %>" alt="pic"><br>
+          <a href="/seeking/<%= pet[i].id %>">Play Fetch with <%= pet[i].pet_name %></a>
+        </div>
+      <% } %>
+      <div id="mission" class="">
+        <em><h2 class="content">"Approximately 6.5 million companion animals enter U.S. animal shelters nationwide every year" <br><span id="stat">--https://www.iii.org/fact-statistic/facts-statistics-pet-statistics</span></h2></em>
+        <p></p>
+        <h3 class="list">Mission</h3>
+        <p class="content">To connect animals in need of human assistance</p>
+        <h3 class="list">The Team</h3>
+        <img id="team" src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/43331122_708697466130472_2169296202053451776_o.jpg?_nc_cat=108&oh=0a656f9ab990a5a4cc7dcef92e806019&oe=5C5A3952" alt="">
+        <p class="content" >Muhammad, Lu, Fido, Frank, Gregg, Jocelyn</p>
+      </div>
+    </div>
+  </body>
+</html>

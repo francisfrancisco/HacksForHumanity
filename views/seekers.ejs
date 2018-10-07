@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="icon" href="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p320x320/43337727_708503136149905_1174188726662725632_n.png?_nc_cat=101&oh=e9065ea68efa135e69ca237dc29ce545&oe=5C4AE567">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker" rel="stylesheet">
+    <style media="screen">
+      html{
+        font-family: "Oswald", sans-serif;
+      }
+      .status:hover {
+        cursor: pointer;
+        color: blue;
+      }
+      #contain{
+        text-align: center;
+      }
+      #seek{
+        width: 50%;
+        margin: 0 auto;
+      }
+      a:link, a:visited{
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        font-size: 15px;
+        color: rgb(23,201,3);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/owners/login">back</a>
+    <div id="contain" class="">
+      <h1>Hello <%= owners.owner_name %></h1><hr>
+      <h2><%= owners.pet_name %>'s Matches:</h2>
+
+      <% for(let i=0; i < seekers.length; i++) {%>
+        <div id="seek" class="">
+          <hr class="hide">
+          <h2 class="hide"><%= seekers[i].seeker_name %>, <%= seekers[i].seeker_age %></h2>
+          <p class="hide"><%= seekers[i].seeker_location %></p>
+          <% if(!seekers[i].seeker_pet) { %>
+            <p class="hide">Doesn't have pets</p>
+            <% } %>
+            <% if(seekers[i].seeker_pet) { %>
+              <p class="hide">Has experience with pets</p>
+              <% } %>
+              <p class="hide"><%= seekers[i].bio%></p>
+              <a class="hide"href="/seekers/view/<%= seekers[i].id %>">view</a>
+            </div>
+            <% } %>
+    </div>
+
+
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

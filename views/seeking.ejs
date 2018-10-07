@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker" rel="stylesheet">
+    <link rel="icon" href="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p320x320/43337727_708503136149905_1174188726662725632_n.png?_nc_cat=101&oh=e9065ea68efa135e69ca237dc29ce545&oe=5C4AE567">
+    <style media="screen">
+      #pic{
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+      }
+      div{
+        text-align: center;
+      }
+      input[type=number]{
+        width: 486px;
+      }
+      html{
+        font-family: 'Oswald', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/">Back</a>
+    <div class="">
+      <h1>Play fetch with <%= pet.pet_name %></h1>
+      <img id="pic" src="<%= pet.img_url %>" alt="">
+
+      <form action="/newSeek/<%= pet.id %>" method="post">
+        <input type="text" name="seeker_name" size="80" placeholder="Name" required><br>
+        <input type="text" name="seeker_email" size="80" placeholder="email" required><br>
+        <input type="number" name="seeker_age" size="80" placeholder="age" required><br>
+        <input type="text" name="seeker_location" size="80" placeholder="location" required><br>
+        Check if you have a pet of your own.<input size="80" type="checkbox" name="seeker_pet"><br>
+        <input type="number" name="years_owned" size="80" placeholder="For how many years?" required><br>
+        <textarea name="bio" rows="8" cols="78" placeholder="Tell us a little about yourself" required></textarea><br>
+        <textarea name="pet_experience" rows="8" cols="78" placeholder="Tell us about your experience with pets" required></textarea><br>
+        <input type="text" name="fb_url" size="80" placeholder="Enter Facebook url"><br>
+        <input id="sub" type="submit" size="80" value="submit">
+      </form>
+      <script type="text/javascript">
+        document.querySelector('#sub').addEventListener('click', () => {
+          alert('your fetch request has been sent!')
+        })
+      </script>
+    </div>
+  </body>
+</html>
