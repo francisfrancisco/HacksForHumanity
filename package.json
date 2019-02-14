@@ -1,0 +1,32 @@
+{
+  "name": "HacksForHumanity",
+  "version": "1.0.0",
+  "description": "<img id=\"border\" src=\"https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-0/p370x247/43337727_708503136149905_1174188726662725632_n.png?_nc_cat=101&oh=23a90c19b19d2e321e921932fc70273a&oe=5C1E8FBF\" alt=\"\"> Fetch is a web app created during the Hacks For Humanity hackathon. Its purpose is to help connect companion animal organizations to volunteers.",
+  "main": "knexfile.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-session-knex": "^1.4.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "knex": "^0.16.3",
+    "moment": "^2.22.2",
+    "pg": "^7.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francisfrancisco/HacksForHumanity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francisfrancisco/HacksForHumanity/issues"
+  },
+  "homepage": "https://github.com/francisfrancisco/HacksForHumanity#readme"
+}
