@@ -23,19 +23,28 @@
         color:rgb(23,201,3);
       }
       #pic{
-        width: 400px;
-        height: 400px;
+        width: 380px;
+        height: 380px;
         border-radius: 50%;
         float: right;
+        margin-right: 175px;
       }
     </style>
   </head>
   <body>
     <a href="/seekers">back</a>
+    <img id="pic" src="https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-4-27-22-pm.png?w=780" alt="">
     <div id="gr" class="">
-      <h1><%= seeker.seeker_name %>, <%= seeker.seeker_age %></h1><img id="pic" src="https://www.indiewire.com/wp-content/uploads/2017/10/screen-shot-2017-10-10-at-4-27-22-pm.png?w=780" alt="">
-      <p>5.0 rating <i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter-square"></i></p>
-      <p><%= seeker.seeker_location %></p>
+      <h1>Terry, <%= seeker.seeker_age %>, <%= seeker.seeker_location %></h1>
+      <p>4.6 rating <i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter-square"></i></p>
+      <h2>Comments:</h2>
+      <p>"Great with cats"</p>
+      <i>-Grace</i>
+      <p>"Dude loves cats"</p>
+      <i>Ant</i>
+      <p>"This guy doesn't like dogs at all"</p>
+      <i>-Craig</i>
+      <hr>
       <p><%= seeker.bio %></p>
       <p>
         <% if(seeker.seeker_pet){ %>
@@ -50,11 +59,11 @@
           <p><%= seeker.pet_experience%></p>
 
           <form action="/seekers/delete/<%= seeker.id %>" method="post">
-            <input type="submit" value="delete">
+            <input type="submit" value="unmatch">
           </form>
 
-          <h2>Email <%= seeker.seeker_name %></h2>
-          <textarea name="content" rows="8" cols="80" placeholder=""></textarea>
+          <h2>Email Terry</h2>
+          <textarea name="content" rows="8" cols="80" placeholder=""></textarea><br>
           <button type="button" name="button" id="email">email</button>
     </div>
 

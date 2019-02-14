@@ -22,6 +22,7 @@ module.exports = function(app){
   app.get('/seekers/view/:seeker_id', owners.Oneseeker);
 
   app.post('/seekers/delete/:seeker_id', seekers.delete);
+  // app.post('/appointments/edit/confirm/:appointment_id', bookings.updateToConfirmed);
 }
 
 
