@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Login from './components/login';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import './App.css';
@@ -8,10 +9,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <TopNav />
           <Switch>
-          <Route exact path='' component={ Index } />
-          <Route path='' component={ Dashboard } />
+            <Route exact path='/' component={ Login } />
+            <Route path='' component={  } />
           </Switch>
         </div>
       </Router>
