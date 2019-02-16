@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+// import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-      
-      </div>
+      <Router>
+        <div className="App">
+          <TopNav />
+          <Switch>
+          <Route exact path='' component={ Index } />
+          <Route path='' component={ Dashboard } />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
