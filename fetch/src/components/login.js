@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { Button, Form, FormGroup, Label, Input, Row, Col } from 'reactstrap';
-import {  } from '../redux/actions/recipes-actions'; //make login actions
-
 
 class Login extends Component {
   state= {
